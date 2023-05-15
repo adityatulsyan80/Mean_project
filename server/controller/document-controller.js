@@ -9,3 +9,7 @@ export const getDocument = async (id) => {
 
     return await Document.create({ _id: id,data: "" })
 }
+
+export const updateDocument = async (id, data) => {
+    return await Document.findByIdAndUpdate(id, {data});
+}
